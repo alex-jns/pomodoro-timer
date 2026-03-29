@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Flow Pomodoro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero-card">
+      <div class="hero-copy">
+        <div class="hero-topbar">
+          <p class="eyebrow">Study Better</p>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">
+            Dark mode
+          </button>
+        </div>
+        <h1>Focus Flow</h1>
+        <p class="hero-text">
+          A modern Pomodoro workspace for deep study sessions, quick breaks, and steady momentum.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-pill">
+            <span id="completedPomodoros">0</span>
+            <small>Pomodoros done</small>
+          </div>
+          <div class="stat-pill">
+            <span id="currentModeLabel">Focus</span>
+            <small>Current mode</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="timer-ring">
+          <svg viewBox="0 0 220 220" class="progress-svg" aria-hidden="true">
+            <circle class="track" cx="110" cy="110" r="92"></circle>
+            <circle class="progress" cx="110" cy="110" r="92"></circle>
+          </svg>
+          <div class="timer-content">
+            <p class="timer-mode" id="timerMode">Focus Session</p>
+            <div class="timer-display" id="timerDisplay">25:00</div>
+            <p class="timer-hint" id="timerHint">Pick a task and begin your sprint.</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="primary-btn" id="startPauseBtn">Start</button>
+          <button class="ghost-btn" id="resetBtn">Reset</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Session Modes</h2>
+          <p>Switch between focused work and intentional recovery.</p>
+        </div>
+
+        <div class="mode-grid">
+          <button class="mode-card active" data-mode="focus" data-minutes="25">
+            <span>Focus</span>
+            <strong>25 min</strong>
+          </button>
+          <button class="mode-card" data-mode="shortBreak" data-minutes="5">
+            <span>Short Break</span>
+            <strong>5 min</strong>
+          </button>
+          <button class="mode-card" data-mode="longBreak" data-minutes="15">
+            <span>Long Break</span>
+            <strong>15 min</strong>
+          </button>
+          <button class="mode-card" data-mode="deepFocus" data-minutes="50">
+            <span>Deep Focus</span>
+            <strong>50 min</strong>
+          </button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Study Intent</h2>
+          <p>Set a target so each cycle starts with a clear mission.</p>
+        </div>
+
+        <label class="task-field" for="taskInput">What are you studying?</label>
+        <input id="taskInput" type="text" maxlength="80" placeholder="Example: Review biology flashcards">
+        <div class="intent-card">
+          <p class="intent-label">Current task</p>
+          <p id="currentTask">No task selected yet.</p>
+        </div>
+      </section>
+
+      <section class="panel panel-accent">
+        <div class="panel-heading">
+          <h2>Today's Momentum</h2>
+          <p>Keep a simple scorecard of the work you've stacked up.</p>
+        </div>
+
+        <div class="metrics">
+          <div class="metric-box">
+            <span id="focusMinutes">0</span>
+            <small>Focus time</small>
+          </div>
+          <div class="metric-box">
+            <span id="cycleCount">0</span>
+            <small>Cycles finished</small>
+          </div>
+        </div>
+
+        <ul class="tips-list">
+          <li>Mute distractions before starting a focus block.</li>
+          <li>Use short breaks to stretch or hydrate.</li>
+          <li>Take a long break after multiple intense rounds.</li>
+        </ul>
+      </section>
+
+      <section class="panel media-panel">
+        <div class="panel-heading">
+          <h2>Study Soundtrack</h2>
+          <p>Keep a lofi stream or your own YouTube study mix playing while you work.</p>
+        </div>
+
+        <div class="player-shell">
+          <div class="video-frame">
+            <iframe
+              id="youtubePlayer"
+              src="https://www.youtube.com/embed/jfKfPfyJRdk"
+              title="YouTube study music player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="player-controls">
+            <label class="task-field" for="youtubeUrl">YouTube link</label>
+            <input
+              id="youtubeUrl"
+              type="url"
+              placeholder="Paste a YouTube watch, share, or embed link"
+            >
+            <div class="controls">
+              <button class="primary-btn" id="loadVideoBtn" type="button">Load video</button>
+              <button class="ghost-btn" id="resetVideoBtn" type="button">Default lofi</button>
+            </div>
+            <p class="embed-status" id="embedStatus">Loaded with the default lofi stream.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

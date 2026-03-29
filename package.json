@@ -1,0 +1,7 @@
+{
+  "name": "focus-flow-pomodoro",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  }
+}
