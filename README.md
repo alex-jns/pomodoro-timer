@@ -9,7 +9,10 @@ Check it out here: [Focus Flow Pomodoro](https://alex-jns.github.io/pomodoro-tim
 - Pomodoro timer with varying session modes
 - Subtle alarm upon session completion
 - Trackers that count sessions and time elapsed
+- Describe the intent of your next session to stay focused
+- Ability to toggle to a dark mode theme that your browser remembers
 - Soundtrack section that supports YouTube links
+  - Defaults to the "lofi hip hop radio" by [Lofi Girl](https://www.youtube.com/channel/UCSJ4gkVC6NrvII8umztf0Ow)
 
 # Usage
 
