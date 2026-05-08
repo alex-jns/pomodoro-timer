@@ -2,10 +2,9 @@
 
 A static website created solely by OpenAI's Codex as a proof of concept. Features a pomodoro timer to assist in studying, work, or focusing on tasks. Supports YouTube links to play music, removing the need for extra tabs that could distract you.
 
-<img width="1206" height="1011" alt="image" src="https://github.com/user-attachments/assets/3ad677ae-1d6d-4b6d-9dce-ebc0805feabb" />
-
-
 Check it out here: [Focus Flow Pomodoro](https://alex-jns.github.io/pomodoro-timer/)
+
+<img width="1206" height="1011" alt="image" src="https://github.com/user-attachments/assets/3ad677ae-1d6d-4b6d-9dce-ebc0805feabb" />
 
 # Features
 
