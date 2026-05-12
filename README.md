@@ -4,7 +4,7 @@ A static website created solely by OpenAI's Codex as a proof of concept. Feature
 
 Check it out here: [Focus Flow Pomodoro](https://alex-jns.github.io/pomodoro-timer/)
 
-<img width="1206" height="1011" alt="image" src="https://github.com/user-attachments/assets/3ad677ae-1d6d-4b6d-9dce-ebc0805feabb" />
+<img width="1208" height="1007" alt="image" src="https://github.com/user-attachments/assets/17146698-92a6-426f-a172-db670f9e3ca7" />
 
 # Features
 
